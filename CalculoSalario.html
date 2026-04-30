@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Salario</title>
+</head>
+<link href="https://googleapis.com" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 1.25rem;
+}
+
+input[type="text"] {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+input[type="submit"], 
+input[type="reset"] {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    margin-top: 1rem;
+}
+
+input[type="submit"] {
+    background-color: #2563eb;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #1d4ed8;
+}
+
+input[type="reset"] {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+input[type="reset"]:hover {
+    background-color: #e5e7eb;
+}
+</style>
+
+<body>
+    <form action="calcularSalario.php" method="post">
+        <label for="texthoras"> Digite as horas trabalhadas:
+            <input type="text" name="txthoras" id=""><br>
+        </label>
+
+        <label for="textvalor"> Digite o valor da hora trabalhada:
+            <input type="text" name="txtvalor" id=""><br>
+        </label>
+
+        <input type="submit" value="Calcular">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
